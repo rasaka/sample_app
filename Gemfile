@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.14'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'rb-readline'
+gem 'therubyracer'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,7 +13,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '1.2.0'
+  gem 'guard-spork', '1.4.2'
   gem 'childprocess', '0.3.9'
   gem 'spork', '0.9.2'
 end
@@ -30,13 +32,20 @@ end
 
 gem 'jquery-rails', '2.0.2'
 
-# Test gems on Windows
+## Test gems on Windows
+#group :test do
+#  gem 'capybara', '1.1.2'
+#  gem 'rb-fchange', '0.0.5'
+#  gem 'rb-notifu', '0.0.4'
+#  gem 'win32console', '1.3.0'
+#  gem 'wdm', '0.1.0'
+#end
+
+# Test gems on Linux
 group :test do
   gem 'capybara', '1.1.2'
-  gem 'rb-fchange', '0.0.5'
-  gem 'rb-notifu', '0.0.4'
-  gem 'win32console', '1.3.0'
-  gem 'wdm', '0.1.0'
+  gem 'rb-inotify', '~> 0.9'
+  gem 'libnotify', '0.5.9'
 end
 
 group :production do
