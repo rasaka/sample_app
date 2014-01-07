@@ -1,1 +1,0 @@
-/home/vagrant/rails_projects/sample_app/sample_app_3.2-gemset/gems/ffi-1.9.3/ext/ffi_c/libffi/src/x86/ffitarget.h
