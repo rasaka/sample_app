@@ -20,3 +20,6 @@
 .project
 .DS_Store
 .idea
+
+# Ignore gemsets
+/sample_app_3.2-gemset
