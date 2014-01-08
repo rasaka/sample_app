@@ -51,6 +51,11 @@ describe "Authentication" do
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
 
+      describe "in the Microposts controller" do
+        before { post microposts_path}
+        specify { response.should redirect_to(signin_path) }
+      end 
+
       describe "when attempting to visit a protected page" do
         before do
           visit edit_user_path(user)
